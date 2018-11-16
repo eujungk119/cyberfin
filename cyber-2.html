@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>관종자가진단</title>
+
+	 
+
+	<script src="https://use.typekit.net/dcf1ame.js"></script>
+	<script>
+		try{Typekit.load({ async: true });}catch(e){}
+			
+	</script>
+	<style type="text/css">
+		.tk-source-han-serif-korean{font-family:"source-han-serif-korean",serif;}
+		body{ overflow: hidden;
+			background-color: black;
+			background-size: cover;}
+
+		h1{	margin: auto;
+			position: relative;
+			text-align: center;
+			font-family: 'source-han-serif-korean', serif; 
+			font-weight: 800;
+			color: #19CEC9;}
+
+		h2{line-height:180%;
+			font-size: 1.5em;
+			text-align: center;
+			font-family: 'source-han-serif-korean', serif; 
+			font-weight: 800;
+			color: white;}
+
+		#survey{
+			width:660px; 
+			height:500px; 
+			background: #8402A1; 
+			display: none;
+			position: absolute; 
+			margin:auto; 
+			top:calc(50% - 250px);
+			left:calc(50% - 330px); }
+
+		#snstitle{
+			font-size: 1.2em;
+			color: white;
+			margin: 0em;
+			border-bottom: 1px solid;
+			width: 340px;
+			margin-bottom: 0.5em;
+
+		}
+
+		p{text-align: center;}
+
+		#personal {
+			text-align: center;
+			font-size: 1.3em;
+			font-family: 'source-han-serif-korean', serif; 
+			font-weight: 800;
+			color: white;
+			}
+
+		#personalq{ 
+			margin-right: 2em;
+			margin-left: 2em;
+			width: calc(660px - 4em);
+				border-top: 2px solid white;}
+
+		#agree{
+			position: absolute;
+			margin: auto;
+			left: calc(50% - 100px);
+			width: 200px;
+			text-align: center;
+			font-size: 1.2em;
+			font-family: 'source-han-serif-korean', serif; 
+			font-weight: 800;
+			color: #19CEC9;
+			border: 2px solid;
+			}
+
+		#button1 {
+			background-color: #19CEC9;
+			border: 1px solid ;
+			padding:8px 16px;}
+
+
+		#notice{
+			position: absolute; 
+			width: 800px;
+			height: 220px;
+			left:calc(50% - 400px);
+			top: calc(50% - 110px);
+			margin: auto;
+		}
+		#sns{
+
+			width: 700px;
+			font-size: 1.3em;
+			font-family: 'source-han-serif-korean', serif; 
+			font-weight: 500;
+			color: white;
+		}
+
+		#nameage{
+			font-size: 1.6em;
+			font-family: 'source-han-serif-korean', serif; 
+			font-weight: 700;
+			color: white;
+			margin-top:0em;
+			margin-bottom: 0em;
+			padding-top: 0em;
+			padding-bottom: 0em;
+			height: 20px;
+			width: 700px;
+
+}
+
+		input[type="checkbox"] {
+			visibility: hidden;
+			margin-right: 2em;}
+
+		input[type="checkbox"]:after {
+			top: -0.5em;
+			width:1.5em;
+			height: 1.5em;
+			border-radius: 0.5em;
+			position: relative;
+			background-color: #000;
+			content: '';
+			display: inline-block;
+			visibility: visible;
+			border: 2px solid #8d8d8d;
+
+			
+		}
+		input[type="checkbox"]:checked:after{
+			
+			background-color: #19CEC9;
+			content: '';
+			display: inline-block;
+			visibility: visible;
+			border: 2px solid #000;
+			text-align: center;
+		}
+		
+		.textbox{
+			float: inherit;
+			height: 2em;
+			margin-bottom: 1em;
+			
+		}
+
+		#marginn{margin: 2em;
+			margin-bottom: 2.5em;}
+		td{width: 200px;
+			height: 40px;}
+
+		input::placeholder {
+			font-family: 'source-han-serif-korean', serif; 
+			font-weight: 800;
+			line-height: 100px;}
+
+		#nametable{margin-bottom: 1.5em;}
+
+		
+		#noticeimg{
+			width:750px;
+			position: relative;
+			margin: auto;
+			left: calc(50% - 375px);
+		}
+		#nextnext
+		{
+			width:60px;
+			margin:auto;
+			position: relative;
+			left: calc(50% - 30px);
+			border-bottom: 1px solid white;}
+
+	</style>
+</head>
+<body>	
+		<div id="notice">			
+			<img src="notice.png" id="noticeimg">	
+			<img src="nextbutton.png" id="nextnext">
+		</div>
+
+
+		<div id="survey">
+			<div id="marginn">
+				<div class="form">
+					<table id="nametable">
+						<tbody>
+							<tr>
+								<td id="nameage">이름　<input type="text" size="16" id="name2" class="textbox"></td>
+							</tr>
+							<tr>
+								<td id="nameage">나이　<input type="text" size="16" class="textbox"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="form" id="sns">
+					<h3 id="snstitle">자주 사용하는 SNS나 커뮤니티</h3>
+					<table>
+						<tbody>
+							<tr>
+								<td>페이스북　　　<input type="checkbox" checked="checked" name="SNS" /> </td>
+								<td>인스타그램　<input type="checkbox" name="SNS" /> </td>
+								<td>트위터　　<input type="checkbox" name="SNS" /></td>
+							</tr>
+							<tr>
+								<td>디씨인사이드　<input type="checkbox" name="SNS" /></td>
+								<td>일간베스트　<input type="checkbox" name="SNS" /></td>
+								<td>다음카페　<input type="checkbox" name="SNS" /></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="form" id="personalq">
+				<h3 id="personal">개인정보 수집에 동의하십니까?</h3>
+				<h3 id="agree"  onclick="moveClose();">동의하고 시작하기</h3>
+
+			</div>
+		</div>   			
+
+
+
+ 	<script language="javascript">
+		nextnext.onclick = function showPopup() {
+			survey.style.display = "block"; 
+	  	}
+
+		function moveClose() {
+			console.log("nex");
+			var url = "cyber-4.html?ttt=" + name2.value;
+			var res = encodeURI(url);
+		  location.href = res;
+		  //self.close(); 
+		}
+		
+	</script>
+
+</body>
+</html>
